@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		551495F31F1DF41D00534D96 /* SyntaxColoringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551495F21F1DF41D00534D96 /* SyntaxColoringTextView.swift */; };
+		551C3DC01F18998100E05332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C3DBF1F18998100E05332 /* AppDelegate.swift */; };
+		551C3DC21F18998100E05332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C3DC11F18998100E05332 /* ViewController.swift */; };
+		551C3DC41F18998100E05332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551C3DC31F18998100E05332 /* Assets.xcassets */; };
+		551C3DC71F18998100E05332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551C3DC51F18998100E05332 /* Main.storyboard */; };
+		551C3DCF1F1899A400E05332 /* SyntaxColoringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C3DCE1F1899A400E05332 /* SyntaxColoringController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		551495F21F1DF41D00534D96 /* SyntaxColoringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxColoringTextView.swift; sourceTree = "<group>"; };
+		551C3DBC1F18998100E05332 /* ULISyntaxColoringController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ULISyntaxColoringController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		551C3DBF1F18998100E05332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		551C3DC11F18998100E05332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		551C3DC31F18998100E05332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		551C3DC61F18998100E05332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		551C3DC81F18998100E05332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551C3DCE1F1899A400E05332 /* SyntaxColoringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxColoringController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		551C3DB91F18998100E05332 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		551C3DB31F18998100E05332 = {
+			isa = PBXGroup;
+			children = (
+				551C3DBE1F18998100E05332 /* ULISyntaxColoringController */,
+				551C3DBD1F18998100E05332 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		551C3DBD1F18998100E05332 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				551C3DBC1F18998100E05332 /* ULISyntaxColoringController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		551C3DBE1F18998100E05332 /* ULISyntaxColoringController */ = {
+			isa = PBXGroup;
+			children = (
+				551C3DBF1F18998100E05332 /* AppDelegate.swift */,
+				551C3DC11F18998100E05332 /* ViewController.swift */,
+				551C3DCE1F1899A400E05332 /* SyntaxColoringController.swift */,
+				551495F21F1DF41D00534D96 /* SyntaxColoringTextView.swift */,
+				551C3DC31F18998100E05332 /* Assets.xcassets */,
+				551C3DC51F18998100E05332 /* Main.storyboard */,
+				551C3DC81F18998100E05332 /* Info.plist */,
+			);
+			path = ULISyntaxColoringController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		551C3DBB1F18998100E05332 /* ULISyntaxColoringController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 551C3DCB1F18998100E05332 /* Build configuration list for PBXNativeTarget "ULISyntaxColoringController" */;
+			buildPhases = (
+				551C3DB81F18998100E05332 /* Sources */,
+				551C3DB91F18998100E05332 /* Frameworks */,
+				551C3DBA1F18998100E05332 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ULISyntaxColoringController;
+			productName = ULISyntaxColoringController;
+			productReference = 551C3DBC1F18998100E05332 /* ULISyntaxColoringController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		551C3DB41F18998100E05332 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Uli Kusterer";
+				TargetAttributes = {
+					551C3DBB1F18998100E05332 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RCKXACKVZS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 551C3DB71F18998100E05332 /* Build configuration list for PBXProject "ULISyntaxColoringController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 551C3DB31F18998100E05332;
+			productRefGroup = 551C3DBD1F18998100E05332 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				551C3DBB1F18998100E05332 /* ULISyntaxColoringController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		551C3DBA1F18998100E05332 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551C3DC41F18998100E05332 /* Assets.xcassets in Resources */,
+				551C3DC71F18998100E05332 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		551C3DB81F18998100E05332 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551C3DC21F18998100E05332 /* ViewController.swift in Sources */,
+				551C3DCF1F1899A400E05332 /* SyntaxColoringController.swift in Sources */,
+				551C3DC01F18998100E05332 /* AppDelegate.swift in Sources */,
+				551495F31F1DF41D00534D96 /* SyntaxColoringTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		551C3DC51F18998100E05332 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				551C3DC61F18998100E05332 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		551C3DC91F18998100E05332 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		551C3DCA1F18998100E05332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		551C3DCC1F18998100E05332 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RCKXACKVZS;
+				INFOPLIST_FILE = ULISyntaxColoringController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ULISyntaxColoringController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		551C3DCD1F18998100E05332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RCKXACKVZS;
+				INFOPLIST_FILE = ULISyntaxColoringController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ULISyntaxColoringController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		551C3DB71F18998100E05332 /* Build configuration list for PBXProject "ULISyntaxColoringController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551C3DC91F18998100E05332 /* Debug */,
+				551C3DCA1F18998100E05332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		551C3DCB1F18998100E05332 /* Build configuration list for PBXNativeTarget "ULISyntaxColoringController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551C3DCC1F18998100E05332 /* Debug */,
+				551C3DCD1F18998100E05332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 551C3DB41F18998100E05332 /* Project object */;
+}
