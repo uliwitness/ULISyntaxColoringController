@@ -9,6 +9,17 @@
 import Cocoa
 
 
+class UndoInfo : NSObject {
+	let text: String
+	let replacementRange: NSRange
+
+	init( text: String, replacementRange: NSRange ) {
+		self.text = text
+		self.replacementRange = replacementRange
+	}
+}
+
+
 @objc(ULISyntaxColoringController) class SyntaxColoringController: NSResponder, NSTextViewDelegate, NSTextStorageDelegate {
 	@IBOutlet var textView: NSTextView!
 	var lastEditedRange = NSRange(location: NSNotFound, length: 0)
@@ -73,30 +84,26 @@ import Cocoa
 	override func insertNewline(_ sender: Any?) {
 		if let textStorage = textView.textStorage {
 			let selectedRange = textView.selectedRange()
-			let lineRange = findLineRange(for: selectedRange, in: textView.textStorage!)
+			let lineRange = findLineRange(for: selectedRange, in: textStorage)
 			let scanner = Scanner(string: textView.string!)
 			scanner.charactersToBeSkipped = nil
 			scanner.scanLocation = lineRange.location
 			var foundText: NSString?
 			scanner.scanUpToCharacters(from: CharacterSet.whitespaces.inverted, into: &foundText)
+			let insertedText: String
 			if let foundText = foundText {
-				textView.replaceCharacters(in: selectedRange, with: "\n\(foundText)")
+				insertedText = "\n\(foundText)"
 			} else {
-				textView.replaceCharacters(in: selectedRange, with: "\n")
+				insertedText = "\n"
 			}
-			textStorage.endEditing()
+			replaceUndoableCharacters(in: selectedRange, with: insertedText)
 		}
 	}
 	
 	
 	override func insertTab(_ sender: Any?) {
-		if let textStorage = textView.textStorage {
-			textStorage.beginEditing()
-			let selectedRange = textView.selectedRange()
-			textStorage.mutableString.deleteCharacters(in: selectedRange)
-			textStorage.mutableString.insert("\t", at: selectedRange.location)
-			textStorage.endEditing()
-		}
+		let selectedRange = textView.selectedRange()
+		replaceUndoableCharacters(in: selectedRange, with: "\t")
 	}
 	
 	
@@ -104,6 +111,21 @@ import Cocoa
 		print("backtab")
 	}
 
+	
+	func replaceUndoableCharacters( in selectedRange: NSRange, with insertedText: String ) {
+		textView.replaceCharacters(in: selectedRange, with: insertedText)
+		let undoInfo = UndoInfo(text: "", replacementRange: NSRange(location: selectedRange.location, length: (insertedText as NSString).length))
+		textView.undoManager?.registerUndo(withTarget: self, selector: #selector(undoRange), object: undoInfo)
+	}
+	
+	
+	dynamic func undoRange( _ undoInfo: UndoInfo ) {
+		let tvStr = textView.string! as NSString
+		let redoInfo = UndoInfo( text: tvStr.substring(with: undoInfo.replacementRange), replacementRange: NSRange(location: undoInfo.replacementRange.location, length: (undoInfo.text as NSString).length) )
+		textView.replaceCharacters(in: undoInfo.replacementRange, with: undoInfo.text)
+		textView.undoManager?.registerUndo(withTarget: self, selector: #selector(undoRange), object: redoInfo)
+	}
+	
 	
 	func turnOffWrapping() {
 		let textContainer = textView.textContainer!
