@@ -9,19 +9,8 @@
 import Cocoa
 
 
-class UndoInfo : NSObject {
-	let text: String
-	let replacementRange: NSRange
-
-	init( text: String, replacementRange: NSRange ) {
-		self.text = text
-		self.replacementRange = replacementRange
-	}
-}
-
-
 @objc(ULISyntaxColoringController) class SyntaxColoringController: NSResponder, NSTextViewDelegate, NSTextStorageDelegate {
-	@IBOutlet var textView: NSTextView!
+	@IBOutlet var textView: SyntaxColoringTextView!
 	var lastEditedRange = NSRange(location: NSNotFound, length: 0)
 	var lastChangeInLength = 0
 	
@@ -96,14 +85,13 @@ class UndoInfo : NSObject {
 			} else {
 				insertedText = "\n"
 			}
-			replaceUndoableCharacters(in: selectedRange, with: insertedText)
+			textView.replaceUndoableCharacters(in: selectedRange, with: insertedText)
 		}
 	}
 	
 	
 	override func insertTab(_ sender: Any?) {
-		let selectedRange = textView.selectedRange()
-		replaceUndoableCharacters(in: selectedRange, with: "\t")
+		textView.replaceUndoableCharacters(in: textView.selectedRange(), with: "\t")
 	}
 	
 	
@@ -111,21 +99,6 @@ class UndoInfo : NSObject {
 		print("backtab")
 	}
 
-	
-	func replaceUndoableCharacters( in selectedRange: NSRange, with insertedText: String ) {
-		textView.replaceCharacters(in: selectedRange, with: insertedText)
-		let undoInfo = UndoInfo(text: "", replacementRange: NSRange(location: selectedRange.location, length: (insertedText as NSString).length))
-		textView.undoManager?.registerUndo(withTarget: self, selector: #selector(undoRange), object: undoInfo)
-	}
-	
-	
-	dynamic func undoRange( _ undoInfo: UndoInfo ) {
-		let tvStr = textView.string! as NSString
-		let redoInfo = UndoInfo( text: tvStr.substring(with: undoInfo.replacementRange), replacementRange: NSRange(location: undoInfo.replacementRange.location, length: (undoInfo.text as NSString).length) )
-		textView.replaceCharacters(in: undoInfo.replacementRange, with: undoInfo.text)
-		textView.undoManager?.registerUndo(withTarget: self, selector: #selector(undoRange), object: redoInfo)
-	}
-	
 	
 	func turnOffWrapping() {
 		let textContainer = textView.textContainer!
